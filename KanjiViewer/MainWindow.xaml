@@ -1,0 +1,22 @@
+﻿<Window x:Class="KanjiViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KanjiViewer"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+        mc:Ignorable="d"
+        Title="Duncan's Custom Kanji Viewer" Height="474.711" Width="477.457" Icon="strokes.ico" BorderBrush="#FF16E8FD" Background="#FFEEEEEE">
+    <Grid>
+        <ScrollViewer x:Name="Scrollbox" CanContentScroll="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,22,0,43">
+            <StackPanel x:Name="myPanel" Focusable="True" Orientation="Vertical" Width="Auto" Background="White"/>
+        </ScrollViewer>
+        <TextBox x:Name="InputBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="漢字を入れてください" VerticalAlignment="Bottom" Width="123" Margin="15,0,0,15" Opacity="0.5" GotFocus="InputBox_GotFocus" TextChanged="InputBox_TextChanged" LostFocus="InputBox_LostFocus"/>
+        <CheckBox x:Name="scale_button" Content="Scale to Window" VerticalAlignment="Bottom" Margin="0,0,20,15" Checked="scale_button_Checked" Unchecked="scale_button_Unchecked" HorizontalAlignment="Right"/>
+        <Menu HorizontalAlignment="Left" Height="17" VerticalAlignment="Top">
+            <MenuItem x:Name="WindowMenu" Header="Config">
+                <MenuItem x:Name="reinit_item" Header="Re-Initialize" Click="reinit_item_Click"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="KanjiViewer.SetupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KanjiViewer"
+        mc:Ignorable="d"
+        Title="SetupWindow" Height="242.256" Width="541.399" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderThickness="0" Closing="Window_Closing">
+    <Grid Margin="0,0,2,-1">
+        <ProgressBar x:Name="load_bar" HorizontalAlignment="Right" Height="35" Margin="150,148,40,15" VerticalAlignment="Bottom" Width="330" Visibility="Hidden"/>
+        <Label Grid.ColumnSpan="2" Content="To initialize, program must extract files." HorizontalAlignment="Left" Height="35" Margin="10,10,0,0" VerticalAlignment="Top" Width="222"/>
+        <Label Content="(Estimated Space: 120MB)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,45,0,0"/>
+        <Label Content="Currently Selected Directory:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,76,0,0"/>
+        <Label x:Name="dir_label" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="176,76,0,0"/>
+        <Button x:Name="dir_button" Content="Change..." HorizontalAlignment="Left" Margin="20,107,0,0" VerticalAlignment="Top" Width="75" Click="dir_button_Click"/>
+        <Button x:Name="start_button" Content="Extract" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="54" Click="start_button_Click"/>
+        <Button x:Name="cancel_button" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" Margin="82,170,0,0" RenderTransformOrigin="0.083,0.62" Click="cancel_button_Click"/>
+        <Label Content="Or" HorizontalAlignment="Left" Margin="108,104,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="existingdb_button" Content="Already Extracted?" HorizontalAlignment="Left" Margin="147,107,0,0" VerticalAlignment="Top" Width="111" Click="existingdb_button_Click"/>
+
+    </Grid>
+</Window>
